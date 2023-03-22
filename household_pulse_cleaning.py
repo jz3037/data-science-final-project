@@ -61,7 +61,6 @@ def split(df, measure, week):
 def main(): 
     df_list = []
     dir = '/Users/jamiezhang/Desktop/data_cleaning/data/'
-    week = 1
     for week in range(1,55):
         print('Processing Week', str(week))
         if week < 49: 
