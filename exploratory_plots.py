@@ -23,9 +23,11 @@ def plot(char_type, measure, measure_num, categories, title, x_ax, y_ax, x_ax_la
     plt.xlabel(x_ax_label)
     plt.ylabel(y_ax_label)
     plt.legend(bbox_to_anchor=(1, 1))
-    plt.show()
+    plt.savefig('/Users/jamiezhang/Desktop/data_cleaning/plots/'+title+'_'+char_type+'.png')
+    plt.cla()
 
 def main(): 
+    
     # Percentage of People Feeling Anxious Nearly Everyday
     # Marital Status
     # Anxiety, Measure 1 
@@ -85,7 +87,7 @@ def main():
         'Week',
         'Percentage of People Feeling Depressed Not At All'
         )
-
+    
     # Percentage of People Feeling Anxious Nearly Everyday
     # Children 
     # Anxiety, Measure 1 
@@ -109,7 +111,7 @@ def main():
         'Anxiety', 
         1, 
         ['Children in household', 'No children'],
-        'Change in Percentage of People Feeling Anxious Nearly Everyday during COVID-19',
+        'Change in Percentage of People Feeling Anxious Not At All during COVID-19',
         'Week',
         'Not at all_normalized',
         'Week',
@@ -184,26 +186,26 @@ def main():
         'Depression', 
         1, 
         ['Male', 'Female'],
-        'Change in Percentage of People Feeling Anxious Nearly Everyday during COVID-19',
+        'Change in Percentage of People Feeling Depressed Nearly Everyday during COVID-19',
         'Week',
         'Nearly everyday_normalized',
         'Week',
-        'Percentage of People Feeling Anxious Nearly Everyday'
+        'Percentage of People Feeling Depressed Nearly Everyday'
         )
     
     # Percentage of People Feeling Depressed Not At all
-    # Children
+    # Sex at birth
     # Depression, Measure 1 
     plot(
         'Sex at birth', 
         'Depression', 
         1, 
         ['Male', 'Female'],
-        'Change in Percentage of People Feeling Anxious Not At All during COVID-19',
+        'Change in Percentage of People Feeling Depressed Not At All during COVID-19',
         'Week',
         'Not at all_normalized',
         'Week',
-        'Percentage of People Feeling Anxious Not At All'
+        'Percentage of People Feeling Depressed Not At All'
         )
     
     # Percentage of People Feeling Anxious Nearly Everyday
@@ -283,11 +285,11 @@ def main():
          '5 people in the household',
          '6 people in the household',
          '7 or more people in the household'],
-        'Change in Percentage of People Feeling Anxious Not At All during COVID-19',
+        'Change in Percentage of People Feeling Depressed Not At All during COVID-19',
         'Week',
         'Not at all_normalized',
         'Week',
-        'Percentage of People Feeling Anxious Not At All'
+        'Percentage of People Feeling Depressed Not At All'
         )
     
 if __name__=='__main__':
